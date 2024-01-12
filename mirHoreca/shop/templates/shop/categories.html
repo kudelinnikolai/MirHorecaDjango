@@ -1,0 +1,22 @@
+{% extends "shop/base/base-page.html" %} {% load static %} {% block content %}
+<section class="cats">
+  <div class="cats__container">
+    <h1 class="cats__title title">{{category.name}}</h1>
+    {% include "shop/base/elements/collectionTagList.html" %}
+    <div class="cats__category-list">
+      {% for category in viewCategories %}
+      <a
+        href="{{ category.get_absolute_url}}"
+        class="cats__category-item category-card"
+      >
+        <img src="{{category.url_image_1600_jpg}}" alt="" class="category-card__image" />
+        <div class="category-card__text">
+          <span class="category-card__definition">Категория</span>
+          <h2 class="category-card__title">{{ category.name }}</h2>
+        </div>
+      </a>
+      {% empty %} Не найдено ни одной категории товаров. {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

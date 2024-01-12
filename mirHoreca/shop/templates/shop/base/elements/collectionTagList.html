@@ -1,0 +1,14 @@
+{% if viewCollections%}
+<div class="cats__collection-list collection-list">
+  <a href="{% url "main_collections" %}" class="collection-list__all-collections">Все коллекции</a>
+  {%for collection in viewCollections%}
+  <a
+    href="{{collection.get_absolute_url}}"
+    class="collection-list__item collection-item"
+  >
+    <span class="collection-item__title">Коллекция</span>
+    <span class="collection-item__name">{{collection.name}}</span>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,11 @@
+{% if breadcrumbs%}
+<ul class="breadcrumbs">
+  {% for breadcrumb in breadcrumbs %}
+  <li class="breadcrumbs__item">
+    <a href="{{breadcrumb.link}}" class="breadcrumbs__link"
+      >{{breadcrumb.title}}</a
+    >
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

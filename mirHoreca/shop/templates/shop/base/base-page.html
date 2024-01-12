@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>{% include "shop/base/elements/head.html" %}</head>
+  <body class="_loading">
+    <div class="wrapper">
+      {% comment %} {% include "shop/base/elements/header.html" %} {% endcomment %}
+      <main class="page">
+        {% comment %} <div class="header__pusher"></div> {% endcomment %}
+        <div class="container">{% include "shop/base/elements/breadcrumbs.html" %}</div>
+        {% block content %}-{% endblock %}
+      </main>
+      {% comment %} {% include "shop/base/elements/footer.html" %} {% endcomment %}
+    </div>
+    {% block extendedScripts %}{% endblock %}
+    <script src="{% static 'shop/js/main.min.js' %}" defer></script>
+  </body>
+</html>

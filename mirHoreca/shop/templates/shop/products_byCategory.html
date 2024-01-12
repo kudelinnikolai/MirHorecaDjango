@@ -1,0 +1,11 @@
+{% extends "shop/base/base-page.html" %} {% load static %} {% block content %}
+<section class="product-list">
+  <div class="product-list__container">
+    <div class="product-list__title title">{{category.name}}</div>
+
+    {% include "shop/base/elements/collectionTagList.html" %} 
+    {% include "shop/base/elements/productList.html" %}
+  </div>
+</section>
+
+{% endblock content %}

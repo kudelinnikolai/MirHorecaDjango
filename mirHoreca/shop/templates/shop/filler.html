@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {% include "shop/base/elements/head.html" %}
+  </head>
+
+  <body class="_loading">
+    <div class="wrapper">
+      <main class="page">
+        <div class="header__pusher"></div>
+        <div class="container"></div>
+        <section class="filler">
+          <div class="filler__container">
+            <div class="filler__content">
+              <img
+                src="{% static 'shop/images/logo.png' %}"
+                alt=""
+                class="filler__logo"
+              />
+              <h1 class="filler__title">
+                Сайт находится в&nbsp;процессе разработки
+              </h1>
+              <div class="filler__text text">
+                <p>
+                  Скоро тут будет большой выбор посуды для вашего дома и
+                  бизнеса!
+                </p>
+                <p class="_pusher">Обязательно будем ждать Вас за покупками!</p>
+
+                Cвязаться с нами можно:
+              </div>
+              <a href="tel:+79236064410" class="filler__contact">
+                <div class="filler__tel-iconText iconText">
+                  <img
+                    src="{% static 'shop/images/svg/tel.svg' %}"
+                    alt=""
+                    class="iconText__icon"
+                  />
+                  <div class="iconText__text">+7 923 606 44 10</div>
+                </div>
+              </a>
+              <a href="mailto:mir.horeca@mail.ru" class="filler__contact">
+                <div class="filler__mail-iconText iconText">
+                  <img
+                    src="{% static 'shop/images/svg/mail.svg' %}"
+                    alt=""
+                    class="iconText__icon"
+                  />
+                  <div class="iconText__text iconText__text--underline">
+                    mir.horeca@mail.ru
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    {% block extendedScripts %} {% endblock %}
+    <script src="{% static 'shop/js/main.min.js' %}" defer></script>
+  </body>
+</html>
